@@ -1,0 +1,19 @@
+{
+    "name": "C++ Development with Custom CMake",
+    "build": {
+      "dockerfile": "Dockerfile",
+      "args": {
+        "REINSTALL_CMAKE_VERSION_FROM_SOURCE": "3.26.4"
+      }
+    },
+    "features": {
+      "ghcr.io/devcontainers/features/vcpkg:1": {
+        "vcpkgJsonPath": "vcpkg.json"
+      },
+      "ghcr.io/devcontainers/features/cmake:1": {
+        "version": "3.26.4"
+      }
+    },
+    "postCreateCommand": "vcpkg install"
+  }
+  
